@@ -63,16 +63,16 @@
     resMock.end = function() {};
     sinon.spy(resMock, "send");
     
-    describe('dbOptions Function', function() {
-        it('DB created successfully', function() {
-            reqMock.params.option = 'create';
-            //mockcloudant.db.create = function( key, callback ){
-            //    callback( false, '' );  
-            //};
+//     describe('dbOptions Function', function() {
+//         it('DB created successfully', function() {
+//             reqMock.params.option = 'create';
+//             //mockcloudant.db.create = function( key, callback ){
+//             //    callback( false, '' );  
+//             //};
             
-            items.dbOptions( reqMock, resMock );
-            assert( resMock.send.lastCall.calledWith( { msg: 'Successfully created database and populated!' } ), 'Unexpected argument: ' + JSON.stringify(resMock.send.lastCall.args) );
-        });
+//             items.dbOptions( reqMock, resMock );
+//             assert( resMock.send.lastCall.calledWith( { msg: 'Successfully created database and populated!' } ), 'Unexpected argument: ' + JSON.stringify(resMock.send.lastCall.args) );
+//         });
         
 //         it('DB not created - cloudant failure', function() {
 //             reqMock.params.option = 'create';  
